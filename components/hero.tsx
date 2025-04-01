@@ -90,7 +90,7 @@ export default function Hero() {
         >
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 relative z-10">
             <img
-              src="/placeholder.svg?height=320&width=320"
+              src="/aditkhandelwal.jpg"
               alt="Adit Khandelwal"
               className="w-full h-full object-cover"
             />

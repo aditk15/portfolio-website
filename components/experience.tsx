@@ -3,8 +3,9 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Calendar, MapPin } from "lucide-react"
+import { Calendar, MapPin, Laptop } from "lucide-react"
 
+// ...existing code...
 const experiences = [
   {
     id: 1,
@@ -14,7 +15,8 @@ const experiences = [
     location: "Bengaluru, India",
     description:
       "Inducted into the Android Front-end Team working on React Native. Contributed to developing a cross-platform mobile app for Cafe Coffee Day, boosting user engagement and operational efficiency. Conducted rigorous testing and debugging to maintain high application quality standards. Strengthened skills in React Native, JavaScript, and agile development practices.",
-    logo: "/placeholder.svg?height=80&width=80",
+    logo: "/techtree.png?height=200&width=200",
+    isCustomIcon: false,
   },
   {
     id: 2,
@@ -24,7 +26,8 @@ const experiences = [
     location: "Remote",
     description:
       "Designing and developing responsive websites using React, Vite, and Tailwind CSS for various clients. Integrating front-end interfaces with back-end services to ensure smooth data flow and functionality. Implementing modern UI/UX principles to enhance the user experience and overall site performance. Continuously optimizing websites for speed, scalability, and mobile responsiveness.",
-    logo: "/placeholder.svg?height=80&width=80",
+    logo: "laptop",
+    isCustomIcon: true,
   },
 ]
 
@@ -90,13 +93,19 @@ export default function Experience() {
                     className="bg-secondaryDark rounded-xl p-6 border border-highlight shadow-lg hover:border-primary/50 transition-all duration-300"
                   >
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden bg-primaryDark p-1 border border-highlight mr-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-primaryDark p-1 border border-highlight mr-4">
+                      {exp.isCustomIcon ? (
+                        <div className="w-full h-full flex items-center justify-center">
+                          {exp.logo === "laptop" && <Laptop className="w-8 h-8 text-white" />}
+                        </div>
+                      ) : (
                         <img
                           src={exp.logo || "/placeholder.svg"}
                           alt={exp.company}
                           className="w-full h-full object-contain"
                         />
-                      </div>
+                      )}
+                    </div>
                       <div>
                         <h3 className="text-xl font-semibold">{exp.role}</h3>
                         <p className="text-primary">{exp.company}</p>

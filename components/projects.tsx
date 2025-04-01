@@ -7,6 +7,8 @@ import { useRef } from "react"
 import { Github, ExternalLink, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const MY_GITHUB_URL = "https://github.com/aditk15";
+
 const projects = [
   {
     id: 1,
@@ -56,7 +58,7 @@ const projects = [
 ]
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
@@ -127,7 +129,7 @@ export default function Projects() {
 
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a href={project.github} className="text-textColor/80 hover:text-primary transition-colors">
+                    <a href={MY_GITHUB_URL} className="text-textColor/80 hover:text-primary transition-colors">
                       <Github className="w-5 h-5" />
                     </a>
                     <a href={project.demo} className="text-textColor/80 hover:text-primary transition-colors">

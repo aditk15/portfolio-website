@@ -1,8 +1,9 @@
 "use client"
 import { Github, Linkedin, Mail, Heart } from "lucide-react"
+import { MouseEvent } from "react"
 
 export default function Footer() {
-  const handleNavClick = (e, href) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
 
     // Get the target element
@@ -34,13 +35,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/adit-khandelwal-142579321/"
                 className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://github.com/aditk15"
                 className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
               >
                 <Github className="w-5 h-5" />
