@@ -59,4 +59,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #b22222;
 }
+/* ...existing code... */
 
+@media screen and (max-width: 768px) {
+  .hero-content {
+    margin-top: 80px; /* Adjust this value as needed based on your header height */
+  }
+  
+  main {
+    padding-top: 20px; /* Additional padding for main content */
+  }
+}
