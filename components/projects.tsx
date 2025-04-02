@@ -15,7 +15,7 @@ const projects = [
     title: "Hand Sign Detection",
     description:
       "Developed a model to detect and recognize ASL hand signs using OpenCV and TensorFlow, displaying them for easier communication.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/hand.svg",
     technologies: ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
     github: "#",
     demo: "#",
@@ -26,7 +26,7 @@ const projects = [
     id: 2,
     title: "Book Tracker Mobile App",
     description: "Native Mobile Application built for Android to keep track of books read using the Google Books API.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/book-user.svg",
     technologies: ["Android", "Java", "Google Books API", "SQLite"],
     github: "#",
     demo: "#",
@@ -37,7 +37,7 @@ const projects = [
     id: 3,
     title: "Flight Route Planner",
     description: "Implemented a Graph Data Structure to identify cost-effective and distance-based flight routes.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/waypoints.svg",
     technologies: ["Python", "Graph Algorithms", "Data Structures", "Dijkstra's Algorithm"],
     github: "#",
     demo: "#",
@@ -48,7 +48,7 @@ const projects = [
     id: 4,
     title: "Arduino Radar System",
     description: "Developed a radar system with GUI using an Arduino Module integrated with peripheral devices.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/radar.svg?height=400&width=600",
     technologies: ["Arduino", "C++", "Ultrasonic Sensors", "GUI Development"],
     github: "#",
     demo: "#",
@@ -107,11 +107,11 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               className="bg-primaryDark rounded-xl overflow-hidden border border-highlight shadow-lg hover:border-primary/50 transition-all duration-300"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden flex items-center justify-center">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-3/5 h-3/5 object-contain transition-transform duration-500 hover:scale-110 filter brightness-0 invert"
                 />
               </div>
 
@@ -180,11 +180,11 @@ export default function Projects() {
                 </Button>
               </div>
 
-              <div className="mb-6 rounded-lg overflow-hidden">
+              <div className="mb-6 rounded-lg overflow-hidden flex items-center justify-center py-8">
                 <img
                   src={selectedProject.image || "/placeholder.svg"}
                   alt={selectedProject.title}
-                  className="w-full h-auto"
+                  className="w-2/3 h-auto filter brightness-0 invert"
                 />
               </div>
 
