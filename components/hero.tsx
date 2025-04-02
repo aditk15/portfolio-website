@@ -6,6 +6,19 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export default function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      const navbarHeight = 80
+      const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth",
+      })
+    }
+  }
+
   return (
     <section
       id="home"
@@ -73,10 +86,14 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-wrap gap-4"
           >
-            <Button className="bg-primary hover:bg-primary/90 text-white">
+            <Button className="bg-primary hover:bg-primary/90 text-white" onClick={() => scrollToSection("projects")}>
               View Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+            <Button
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10"
+              onClick={() => scrollToSection("contact")}
+            >
               Contact Me
             </Button>
           </motion.div>
@@ -89,11 +106,7 @@ export default function Hero() {
           className="relative mx-auto"
         >
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 relative z-10">
-            <img
-              src="/aditkhandelwal.jpg"
-              alt="Adit Khandelwal"
-              className="w-full h-full object-cover"
-            />
+            <img src="/aditkhandelwal.jpg" alt="Adit Khandelwal" className="w-full h-full object-cover" />
           </div>
           <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
         </motion.div>

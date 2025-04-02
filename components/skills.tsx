@@ -24,7 +24,7 @@ const skillCategories = [
   {
     title: "Mobile Development",
     icon: <Smartphone className="w-6 h-6" />,
-    skills: ["iOS", "Android", "React Native", "Flutter", "Mobile UI/UX"],
+    skills: ["iOS", "Android", "React Native", "Mobile UI/UX"],
   },
   {
     title: "Databases",
