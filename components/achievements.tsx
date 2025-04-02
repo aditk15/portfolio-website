@@ -14,36 +14,36 @@ const achievements = [
   },
   {
     id: 2,
-    title: "PADI Certified Open Water Diver",
-    description: "Certified up to 18 meters unaccompanied",
-    icon: <Globe className="w-6 h-6" />,
-  },
-  {
-    id: 3,
-    title: "AFS NSLI-Y Program",
-    description:
-      "Hosted an American student for six weeks through the highly selective program, fostering cross-cultural exchange",
-    icon: <BookOpen className="w-6 h-6" />,
-  },
-  {
-    id: 4,
     title: "GKDC 2023 Participant",
     description: "Represented college in GKDC 2023, a National Level Go Karting Competition held in Coimbatore",
     icon: <Flag className="w-6 h-6" />,
   },
   {
-    id: 5,
+    id: 3,
     title: "Senior Vice Captain",
     description:
       "Served as Senior Vice Captain at The Shishukunj International School, leading event management and team coordination",
     icon: <Users className="w-6 h-6" />,
   },
   {
-    id: 6,
+    id: 4,
     title: "NDA & SSB Interview",
     description: "Cleared NDA Stage-1 and appeared for the SSB Interview at 4 AFSB, Varanasi",
     icon: <Shield className="w-6 h-6" />,
   },
+  {
+    id: 5,
+    title: "PADI Certified Open Water Diver",
+    description: "Certified up to 18 meters unaccompanied",
+    icon: <Globe className="w-6 h-6" />,
+  },
+  {
+    id: 6,
+    title: "AFS NSLI-Y Program",
+    description:
+      "Hosted an American student for six weeks through the highly selective program, fostering cross-cultural exchange",
+    icon: <BookOpen className="w-6 h-6" />,
+  }
 ]
 
 export default function Achievements() {
